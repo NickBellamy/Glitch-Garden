@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour {
 			Debug.Log ("Same Level Music");
 		}
 				
-		if (thisLevelMusic/*Add this back in for continuous menu music: && thisLevelMusic != audioSource.clip*/) {
+		if (thisLevelMusic && thisLevelMusic != audioSource.clip) {
 			audioSource.clip = thisLevelMusic;
 			audioSource.loop = true;
 			audioSource.Play ();
