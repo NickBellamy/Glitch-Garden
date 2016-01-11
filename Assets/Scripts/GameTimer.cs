@@ -12,6 +12,7 @@ public class GameTimer : MonoBehaviour {
 	private LevelManager levelManager;
 	private GameObject youWinLabel;
 	private GameObject spawner;
+	private GameObject defenders;
 	
 	
 	void Start() {
@@ -21,6 +22,7 @@ public class GameTimer : MonoBehaviour {
 		slider = GetComponent<Slider>();
 		audioSource = GetComponent<AudioSource>();
 		spawner = GameObject.Find("Spawners");
+		defenders = GameObject.Find ("Defenders");
 		
 		youWinLabel.SetActive(false);
 		audioSource.volume = PlayerPrefsManager.GetMasterVolume();
@@ -34,6 +36,7 @@ public class GameTimer : MonoBehaviour {
 			levelComplete = true;
 			audioSource.audio.Play();
 			youWinLabel.SetActive(true);
+			Destroy(defenders);
 			Destroy(spawner);
 			Invoke ("LoadNextLevel", audioSource.clip.length + 0.5f);
 		}
