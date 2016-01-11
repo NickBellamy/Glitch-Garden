@@ -1911,7 +1911,7 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 10
+    intParameter: 15
     messageOptions: 0
   - time: 5.9666667
     functionName: StarBurst
