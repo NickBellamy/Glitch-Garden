@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class GameTimer : MonoBehaviour {
-
+	
 	public float levelTime = 100f;
 	
 	private bool levelComplete = false;
@@ -16,6 +16,7 @@ public class GameTimer : MonoBehaviour {
 	private GameObject projectiles;
 	private AudioSource music;
 	private float currentMusicVolume;
+	private bool debugMode = false;
 	
 	
 	void Start() {
@@ -26,7 +27,12 @@ public class GameTimer : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 		spawner = GameObject.Find("Spawners");
 		defenders = GameObject.Find ("Defenders");
-		music = GameObject.FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
+		if (GameObject.FindObjectOfType<MusicManager>()) {
+			music = GameObject.FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
+		} else {
+			Debug.LogWarning("No music manager found, entering debug mode");
+			debugMode = true;
+		}
 		currentMusicVolume = PlayerPrefsManager.GetMasterVolume();
 		
 		youWinLabel.SetActive(false);
@@ -40,7 +46,7 @@ public class GameTimer : MonoBehaviour {
 		if(slider.value >= slider.maxValue && !levelComplete) {
 			projectiles = GameObject.Find("Projectiles");
 			levelComplete = true;
-			music.volume = (currentMusicVolume * 0.5f);
+			if (!debugMode) {music.volume = (currentMusicVolume * 0.4f);}
 			audioSource.audio.Play();
 			youWinLabel.SetActive(true);
 			Destroy(defenders);
@@ -51,7 +57,7 @@ public class GameTimer : MonoBehaviour {
 	}
 	
 	void LoadNextLevel () {
-		music.volume = currentMusicVolume;
+		if (!debugMode) {music.volume = currentMusicVolume;}
 		levelManager.LoadNextLevel();
 	}
 }
