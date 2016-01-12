@@ -14,6 +14,8 @@ public class GameTimer : MonoBehaviour {
 	private GameObject spawner;
 	private GameObject defenders;
 	private GameObject projectiles;
+	private AudioSource music;
+	private float currentMusicVolume;
 	
 	
 	void Start() {
@@ -24,6 +26,8 @@ public class GameTimer : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 		spawner = GameObject.Find("Spawners");
 		defenders = GameObject.Find ("Defenders");
+		music = GameObject.FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
+		currentMusicVolume = PlayerPrefsManager.GetMasterVolume();
 		
 		youWinLabel.SetActive(false);
 		audioSource.volume = PlayerPrefsManager.GetMasterVolume();
@@ -36,6 +40,7 @@ public class GameTimer : MonoBehaviour {
 		if(slider.value >= slider.maxValue && !levelComplete) {
 			projectiles = GameObject.Find("Projectiles");
 			levelComplete = true;
+			music.volume = (currentMusicVolume * 0.5f);
 			audioSource.audio.Play();
 			youWinLabel.SetActive(true);
 			Destroy(defenders);
@@ -46,6 +51,7 @@ public class GameTimer : MonoBehaviour {
 	}
 	
 	void LoadNextLevel () {
+		music.volume = currentMusicVolume;
 		levelManager.LoadNextLevel();
 	}
 }
