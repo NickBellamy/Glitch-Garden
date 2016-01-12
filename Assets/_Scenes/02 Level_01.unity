@@ -331,7 +331,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423872, guid: 32013379d93452e498fdf80870d73a97, type: 2}
       propertyPath: levelTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 22323864, guid: 32013379d93452e498fdf80870d73a97, type: 2}
       propertyPath: m_RenderMode
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eeb9c7499fd8524da98ccf011526575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 100
+  levelTime: 90
 --- !u!114 &330981714
 MonoBehaviour:
   m_ObjectHideFlags: 0
