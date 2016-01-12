@@ -12,7 +12,7 @@ public class OptionsController : MonoBehaviour {
 	 
 	private MusicManager musicManager;
 	private float defaultVolume = 0.8f;
-	private float defaultDifficulty = 2f;
+	private float defaultDifficulty = 0f;
 	
 	
 	// Use this for initialization
