@@ -13,6 +13,7 @@ public class GameTimer : MonoBehaviour {
 	private GameObject youWinLabel;
 	private GameObject spawner;
 	private GameObject defenders;
+	private GameObject projectiles;
 	
 	
 	void Start() {
@@ -33,11 +34,13 @@ public class GameTimer : MonoBehaviour {
 		slider.value += Time.deltaTime / levelTime;
 		
 		if(slider.value >= slider.maxValue && !levelComplete) {
+			projectiles = GameObject.Find("Projectiles");
 			levelComplete = true;
 			audioSource.audio.Play();
 			youWinLabel.SetActive(true);
 			Destroy(defenders);
 			Destroy(spawner);
+			Destroy(projectiles);
 			Invoke ("LoadNextLevel", audioSource.clip.length + 0.5f);
 		}
 	}
