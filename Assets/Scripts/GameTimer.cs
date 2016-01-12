@@ -17,6 +17,7 @@ public class GameTimer : MonoBehaviour {
 	private AudioSource music;
 	private float currentMusicVolume;
 	private bool debugMode = false;
+	private BoxCollider2D playArea;
 	
 	
 	void Start() {
@@ -27,6 +28,7 @@ public class GameTimer : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 		spawner = GameObject.Find("Spawners");
 		defenders = GameObject.Find ("Defenders");
+		playArea = GameObject.FindObjectOfType<DefenderSpawner>().GetComponent<BoxCollider2D>();
 		if (GameObject.FindObjectOfType<MusicManager>()) {
 			music = GameObject.FindObjectOfType<MusicManager>().GetComponent<AudioSource>();
 		} else {
@@ -50,6 +52,7 @@ public class GameTimer : MonoBehaviour {
 			audioSource.audio.Play();
 			youWinLabel.SetActive(true);
 			Destroy(defenders);
+			Destroy (playArea);
 			Destroy(spawner);
 			Destroy(projectiles);
 			Invoke ("LoadNextLevel", audioSource.clip.length + 0.5f);
