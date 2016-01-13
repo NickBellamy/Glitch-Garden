@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class GameTimer : MonoBehaviour {
+
+	//TODO Look at refactoring a lot of this into GameOver.cs
 	
 	public float levelTime = 100f;
 	

@@ -2,15 +2,20 @@
 using System.Collections;
 
 public class LoseCollider : MonoBehaviour {
-	private LevelManager levelManager;
+
+	private GameOver gameOver;
+
 	
-	void Start() {
-		levelManager = GameObject.FindObjectOfType<LevelManager>();
+	void Awake() {
+		gameOver = GameObject.FindObjectOfType<GameOver>();
 	}
 	
 	void OnTriggerEnter2D (Collider2D col) {
 		if (col.GetComponent<Attacker>()) {
-			levelManager.LoadLevel("03b Lose");
+		gameOver.triggerGameOver();
+
 		}
 	}
+	
+
 }
