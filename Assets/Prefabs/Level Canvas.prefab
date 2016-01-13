@@ -181,6 +181,8 @@ GameObject:
   - 224: {fileID: 22423884}
   - 222: {fileID: 22223876}
   - 114: {fileID: 11423888}
+  - 114: {fileID: 11473590}
+  - 95: {fileID: 9573590}
   m_Layer: 5
   m_Name: Level Complete
   m_TagString: Untagged
@@ -220,6 +222,7 @@ GameObject:
   - 114: {fileID: 11495648}
   - 114: {fileID: 11495650}
   - 82: {fileID: 8295650}
+  - 95: {fileID: 9573592}
   m_Layer: 5
   m_Name: Game Over
   m_TagString: Untagged
@@ -412,6 +415,36 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!95 &9573590
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8bbe545dc4c2f494b95bfa6937476e06, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &9573592
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e43ccae24385fe14e97f25b4b3931692, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &9575288
 Animator:
   serializedVersion: 3
@@ -702,6 +735,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Level Complete!
+--- !u!114 &11473590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b2ede4101b927c4c9333414be3b6106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11475286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1043,7 +1087,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 5.5000205, y: -7.62939453e-06}
+  m_AnchoredPosition: {x: -1392, y: -7.62939453e-06}
   m_SizeDelta: {x: 1164, y: 265}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22475288
