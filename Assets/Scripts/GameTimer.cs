@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class GameTimer : MonoBehaviour {
+
+	//TODO Look at refactoring a lot of this into GameOver.cs
 	
 	public float levelTime = 100f;
 	
@@ -50,7 +52,9 @@ public class GameTimer : MonoBehaviour {
 			levelComplete = true;
 			if (!debugMode) {music.volume = (currentMusicVolume * 0.4f);}
 			audioSource.audio.Play();
+			//TODO no longer need to set this as Active can be false on init because it will be off screen
 			youWinLabel.SetActive(true);
+			youWinLabel.GetComponent<Animator>().SetTrigger("isComplete trigger");
 			Destroy(defenders);
 			Destroy (playArea);
 			Destroy(spawner);
