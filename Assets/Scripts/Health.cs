@@ -8,10 +8,11 @@ public class Health : MonoBehaviour {
 	public void DealDamage(float damage) {
 		health -= damage;
 		if (health <= 0) {
-			//Optionally trigger an animation
-			//Call DestroyObject() from animation
-			//else...
-			DestroyObject();
+			//Move position of object with zero health and then wait to destroy it
+			//This ensures that the OnTriggerExit2D function gets called which is
+			//used to keep track of the rustling sound from the hedges.
+			gameObject.transform.position += new Vector3(1000000.0f, 1000000.0f, 0.0f);
+			Invoke ("DestroyObject", 2.0f);
 		}
 	}
 	
