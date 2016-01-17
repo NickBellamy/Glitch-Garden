@@ -18,7 +18,9 @@ public class Attacker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Translate(Vector3.left * currentSpeed * Time.deltaTime);
-		if (!currentTarget) {
+		//check if there is no current target, or current target is off screen
+		//need to put in this check because of the way destroy works in the health script
+		if (!currentTarget || currentTarget.transform.position.x >= 1000000.0f) {
 			animator.SetBool("isAttacking", false);
 		}
 	}

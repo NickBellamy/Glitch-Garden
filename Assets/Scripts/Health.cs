@@ -29,7 +29,7 @@ public class Health : MonoBehaviour {
 			//This ensures that the OnTriggerExit2D function gets called which is
 			//used to keep track of the rustling sound from the hedges.
 			gameObject.transform.position += new Vector3(1000000.0f, 1000000.0f, 0.0f);
-			Invoke ("DestroyObject", 2.0f);
+			Invoke ("DestroyObject", 2.1f);
 		}
 		if (gameObject.GetComponent<Defenders>()) {
 			UpdateHealthBar();
@@ -40,9 +40,7 @@ public class Health : MonoBehaviour {
 		//change value
 		healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(0.8f * (health / maxHealth), 0f);
 		//change color
-		image.color = Color.Lerp(minColor,
-		                         maxColor,
-		                         Mathf.Lerp(0, 1f, health / maxHealth));	
+		image.color = Color.Lerp(minColor, maxColor, Mathf.Lerp(0, 1f, health / maxHealth));	
 	}
 	
 	public void DestroyObject() {
