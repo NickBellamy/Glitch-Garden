@@ -1,15 +1,25 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+
 
 public class Health : MonoBehaviour {
 	
 	public float health = 100f;
 	public GameObject healthBar;
+	public Color minColor;
+	public Color maxColor;
 	
 	private float maxHealth;
+	private Image image;
+	
+	//TODO: Seperate out the Health Bar components and create a new specific script?
 	
 	void Start() {
 		maxHealth = health;
+		if (gameObject.GetComponent<Defenders>()) {
+			image = healthBar.GetComponent<Image>();
+		}
 	}
 	
 	public void DealDamage(float damage) {
@@ -22,8 +32,17 @@ public class Health : MonoBehaviour {
 			Invoke ("DestroyObject", 2.0f);
 		}
 		if (gameObject.GetComponent<Defenders>()) {
-			healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(health / maxHealth, 0f);
+			UpdateHealthBar();
 		}
+	}
+	
+	void UpdateHealthBar() {
+		//change value
+		healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(health / maxHealth, 0f);
+		//change color
+		image.color = Color.Lerp(minColor,
+		                         maxColor,
+		                         Mathf.Lerp(0, 1.0f, health / maxHealth));	
 	}
 	
 	public void DestroyObject() {

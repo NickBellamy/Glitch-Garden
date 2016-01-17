@@ -361,6 +361,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   healthBar: {fileID: 115498}
+  minColor: {r: .808823526, g: 0, b: .0713668466, a: 1}
+  maxColor: {r: .0340613946, g: .926470578, b: .224852264, a: 1}
 --- !u!114 &11415510
 MonoBehaviour:
   m_ObjectHideFlags: 1
