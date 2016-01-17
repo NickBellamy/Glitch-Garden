@@ -38,11 +38,11 @@ public class Health : MonoBehaviour {
 	
 	void UpdateHealthBar() {
 		//change value
-		healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(health / maxHealth, 0f);
+		healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(0.8f * (health / maxHealth), 0f);
 		//change color
 		image.color = Color.Lerp(minColor,
 		                         maxColor,
-		                         Mathf.Lerp(0, 1.0f, health / maxHealth));	
+		                         Mathf.Lerp(0, 1f, health / maxHealth));	
 	}
 	
 	public void DestroyObject() {
