@@ -9,7 +9,6 @@ public class StarTrophy : MonoBehaviour {
 	private GameObject starBurst;
 
 	public void StarBurst() {
-	Debug.Log ("Burst called");
 		Vector3 starPos = star.transform.position;
 		starPos.z = burstPrefab.GetComponent<Transform>().position.z;
 		starBurst = Instantiate(burstPrefab, starPos, Quaternion.identity) as GameObject;

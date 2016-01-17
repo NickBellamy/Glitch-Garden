@@ -15,9 +15,4 @@ public class SetStartVolume : MonoBehaviour {
 			Debug.LogWarning ("No music manager found in scene, cannot set volume");
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

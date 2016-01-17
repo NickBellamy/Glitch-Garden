@@ -11,7 +11,6 @@ public class Spawner : MonoBehaviour {
 				Spawn (thisAttacker);
 			}
 		}
-		
 	}
 	
 	void Spawn (GameObject myGameObject) {
