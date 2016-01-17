@@ -395,11 +395,11 @@ AudioSource:
   m_GameObject: {fileID: 140284}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 1b0e3bf3452830a44925f77502aa1feb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4410be816ce095a4ebc442fb50f26c67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -453,11 +453,11 @@ AudioSource:
   m_GameObject: {fileID: 140290}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 1b0e3bf3452830a44925f77502aa1feb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4410be816ce095a4ebc442fb50f26c67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -511,11 +511,11 @@ AudioSource:
   m_GameObject: {fileID: 140294}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 1b0e3bf3452830a44925f77502aa1feb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4410be816ce095a4ebc442fb50f26c67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -569,11 +569,11 @@ AudioSource:
   m_GameObject: {fileID: 140298}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 1b0e3bf3452830a44925f77502aa1feb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4410be816ce095a4ebc442fb50f26c67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -627,11 +627,11 @@ AudioSource:
   m_GameObject: {fileID: 140302}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 1b0e3bf3452830a44925f77502aa1feb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4410be816ce095a4ebc442fb50f26c67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
