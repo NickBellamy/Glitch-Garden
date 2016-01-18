@@ -57,7 +57,8 @@ public class GameTimer : MonoBehaviour {
 			youWinLabel.GetComponent<Animator>().SetTrigger("isComplete trigger");
 			Destroy(defenders);
 			Destroy (playArea);
-			Destroy(spawner);
+			spawner.transform.position += new Vector3 (1000.0f, 0, 0);
+			Invoke ("DestroySpawner", 0.5f);
 			Destroy(projectiles);
 			Invoke ("LoadNextLevel", audioSource.clip.length + 0.5f);
 		}
@@ -66,5 +67,9 @@ public class GameTimer : MonoBehaviour {
 	void LoadNextLevel () {
 		if (!debugMode) {music.volume = currentMusicVolume;}
 		levelManager.LoadNextLevel();
+	}
+	
+	void DestroySpawner() {
+		Destroy(spawner);
 	}
 }
