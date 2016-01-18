@@ -11,6 +11,7 @@ GameObject:
   - 222: {fileID: 22210166}
   - 114: {fileID: 11410168}
   - 114: {fileID: 11410166}
+  - 114: {fileID: 11425906}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -39,7 +40,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: .808823526, g: 0, b: .0713668466, a: 1}
-    m_PressedColor: {r: .196078435, g: .517647088, b: .196078435, a: 1}
+    m_PressedColor: {r: .992647052, g: .431288034, b: 0, a: 1}
     m_DisabledColor: {r: .250980407, g: .250980407, b: .250980407, a: .501960814}
     m_ColorMultiplier: 2
     m_FadeDuration: .100000001
@@ -97,6 +98,20 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Quit
+--- !u!114 &11425906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!222 &22210166
 CanvasRenderer:
   m_ObjectHideFlags: 1

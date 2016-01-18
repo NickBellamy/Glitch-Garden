@@ -11,7 +11,6 @@ GameObject:
   - 95: {fileID: 9557902}
   - 61: {fileID: 6157902}
   - 114: {fileID: 11457886}
-  - 114: {fileID: 11457888}
   - 114: {fileID: 11457890}
   - 114: {fileID: 11457892}
   - 212: {fileID: 21257900}
@@ -168,17 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starCost: 15
---- !u!114 &11457888
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 157894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e11c55d3b2829be489c9c912ae4caab8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11457890
 MonoBehaviour:
   m_ObjectHideFlags: 1

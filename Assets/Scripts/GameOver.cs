@@ -34,7 +34,8 @@ public class GameOver : MonoBehaviour {
 		projectiles = GameObject.Find("Projectiles");
 		Destroy(defenders);
 		Destroy (playArea);
-		Destroy(spawner);
+		spawner.transform.position += new Vector3 (1000.0f, 0, 0);
+		Invoke ("DestroySpawner", 0.5f);
 		Destroy(projectiles);
 		gameObject.SetActive(true);
 		gameObject.GetComponent<Animator>().SetTrigger("gameOver trigger");
@@ -46,5 +47,9 @@ public class GameOver : MonoBehaviour {
 	void LoadLoseLevel() {
 		
 		levelManager.LoadLevel("03b Lose");
+	}
+	
+	void DestroySpawner() {
+		Destroy(spawner);
 	}
 }

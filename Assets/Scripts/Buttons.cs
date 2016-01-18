@@ -12,6 +12,7 @@ public class Buttons : MonoBehaviour {
 	private Text costText;
 	
 	void Start() {
+		selectedDefender = null;
 		selectButtons = GameObject.FindObjectsOfType<Buttons>();
 		costText = GetComponentInChildren<Text>();
 		

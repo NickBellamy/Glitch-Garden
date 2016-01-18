@@ -11,8 +11,6 @@ public class OptionsController : MonoBehaviour {
 	public Button applyButton;
 	 
 	private MusicManager musicManager;
-	private float defaultVolume = 0.8f;
-	private float defaultDifficulty = 0f;
 	
 	
 	// Use this for initialization
@@ -34,12 +32,12 @@ public class OptionsController : MonoBehaviour {
 	}
 	
 	public void SetDefaults() {
-		volumeSlider.value = defaultVolume;
-		difficultySlider.value = defaultDifficulty;
+		volumeSlider.value = PlayerPrefsManager.defaultVolume;
+		difficultySlider.value = PlayerPrefsManager.defaultDifficulty;
 	}
 	
 	public void SliderChanged () {
-		if (volumeSlider.value != defaultVolume || difficultySlider.value != defaultDifficulty) {
+		if (volumeSlider.value != PlayerPrefsManager.defaultVolume || difficultySlider.value != PlayerPrefsManager.defaultDifficulty) {
 			defaultsButton.interactable = true;
 		} else {
 			defaultsButton.interactable = false;
