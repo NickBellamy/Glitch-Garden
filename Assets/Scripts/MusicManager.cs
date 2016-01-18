@@ -15,11 +15,7 @@ public class MusicManager : MonoBehaviour {
 	void Start() {
 		audioSource = GetComponent<AudioSource>();
 		float volume = PlayerPrefsManager.GetMasterVolume();
-		if (volume != null) {
-			SetVolume(volume);
-		} else {
-			SetVolume(PlayerPrefsManager.defaultVolume);
-		}
+		SetVolume(volume);
 	}
 	
 	void OnLevelWasLoaded(int level) {

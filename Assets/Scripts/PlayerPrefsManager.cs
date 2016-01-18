@@ -23,7 +23,7 @@ public class PlayerPrefsManager : MonoBehaviour {
 	//Master Volume Get
 	
 	public static float GetMasterVolume() {
-		return PlayerPrefs.GetFloat (MASTER_VOLUME_KEY);
+		return PlayerPrefs.GetFloat (MASTER_VOLUME_KEY, defaultVolume);
 	}
 	
 	//Difficulty Set
@@ -39,7 +39,7 @@ public class PlayerPrefsManager : MonoBehaviour {
 	//Difficulty Get
 	
 	public static float GetDifficulty() {
-		return PlayerPrefs.GetFloat (DIFFICULTY_KEY);
+		return PlayerPrefs.GetFloat (DIFFICULTY_KEY, defaultDifficulty);
 	}
 	
 	//Level Unlock Set
