@@ -48,7 +48,6 @@ GameObject:
   - 224: {fileID: 22448622}
   - 222: {fileID: 22248620}
   - 114: {fileID: 11448628}
-  - 114: {fileID: 11448626}
   - 95: {fileID: 9548620}
   m_Layer: 5
   m_Name: Level Complete
@@ -312,17 +311,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &11448626
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b2ede4101b927c4c9333414be3b6106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11448628
 MonoBehaviour:
   m_ObjectHideFlags: 1
