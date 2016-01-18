@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class UIButtons : MonoBehaviour {
+public class PauseButton : MonoBehaviour {
 	
 	private LevelManager levelManager;
 	private bool isPaused = false;
