@@ -869,6 +869,7 @@ GameObject:
   - 224: {fileID: 408553332}
   - 222: {fileID: 408553334}
   - 114: {fileID: 408553333}
+  - 114: {fileID: 408553335}
   m_Layer: 5
   m_Name: Cost
   m_TagString: Untagged
@@ -930,6 +931,20 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 408553331}
+--- !u!114 &408553335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408553331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &411347811
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +997,7 @@ GameObject:
   - 224: {fileID: 429618019}
   - 222: {fileID: 429618018}
   - 114: {fileID: 429618017}
+  - 114: {fileID: 429618020}
   m_Layer: 5
   m_Name: Cost
   m_TagString: Untagged
@@ -1043,6 +1059,20 @@ RectTransform:
   m_AnchoredPosition: {x: -.178000003, y: -.210999995}
   m_SizeDelta: {x: 60.1800003, y: 62.0999985}
   m_Pivot: {x: .5, y: .5}
+--- !u!114 &429618020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 429618016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &474002810
 GameObject:
   m_ObjectHideFlags: 0
